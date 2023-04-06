@@ -19,37 +19,37 @@ public class GenLanguage extends LanguageProvider {
         add("itemGroup." + TAB_NAME, "BackStick");
         add(TOOLTIP, "Debug: { %s | %s | %s }");
 
-        add(RegMod.WOODEN_BACKSTICK.get(), "Wooden backstick");
-        add(RegMod.STONE_BACKSTICK.get(), "Stone backstick");
-        add(RegMod.COPPER_BACKSTICK.get(), "Copper backstick");
-        add(RegMod.IRON_BACKSTICK.get(), "Iron backstick");
-        add(RegMod.GOLDEN_BACKSTICK.get(), "Golden backstick");
-        add(RegMod.DIAMOND_BACKSTICK.get(), "Diamond backstick");
-        add(RegMod.NETHERITE_BACKSTICK.get(), "Netherite backstick");
+        add(RegMod.WOODEN_BACKSTICK.get(), "Wooden BackStick");
+        add(RegMod.STONE_BACKSTICK.get(), "Stone BackStick");
+        add(RegMod.COPPER_BACKSTICK.get(), "Copper BackStick");
+        add(RegMod.IRON_BACKSTICK.get(), "Iron BackStick");
+        add(RegMod.GOLDEN_BACKSTICK.get(), "Golden BackStick");
+        add(RegMod.DIAMOND_BACKSTICK.get(), "Diamond BackStick");
+        add(RegMod.NETHERITE_BACKSTICK.get(), "Netherite BackStick");
 
-        add(RegMod.WOODEN_BACKBREACKER.get(), "Wooden backbreacker");
-        add(RegMod.STONE_BACKBREACKER.get(), "Stone backbreacker");
-        add(RegMod.COPPER_BACKBREACKER.get(), "Copper backbreacker");
-        add(RegMod.IRON_BACKBREACKER.get(), "Iron backbreacker");
-        add(RegMod.GOLDEN_BACKBREACKER.get(), "Golden backbreacker");
-        add(RegMod.DIAMOND_BACKBREACKER.get(), "Diamond backbreacker");
-        add(RegMod.NETHERITE_BACKBREACKER.get(), "Netherite backbreacker");
+        add(RegMod.WOODEN_BACKBREACKER.get(), "Wooden BackBreacker");
+        add(RegMod.STONE_BACKBREACKER.get(), "Stone BackBreacker");
+        add(RegMod.COPPER_BACKBREACKER.get(), "Copper BackBreacker");
+        add(RegMod.IRON_BACKBREACKER.get(), "Iron BackBreacker");
+        add(RegMod.GOLDEN_BACKBREACKER.get(), "Golden BackBreacker");
+        add(RegMod.DIAMOND_BACKBREACKER.get(), "Diamond BackBreacker");
+        add(RegMod.NETHERITE_BACKBREACKER.get(), "Netherite BackBreacker");
 
-        add(RegMod.WOODEN_BACKENGRAVER.get(), "Wooden backengraver");
-        add(RegMod.STONE_BACKENGRAVER.get(), "Stone backengraver");
-        add(RegMod.COPPER_BACKENGRAVER.get(), "Copper backengraver");
-        add(RegMod.IRON_BACKENGRAVER.get(), "Iron backengraver");
-        add(RegMod.GOLDEN_BACKENGRAVER.get(), "Golden backengraver");
-        add(RegMod.DIAMOND_BACKENGRAVER.get(), "Diamond backengraver");
-        add(RegMod.NETHERITE_BACKENGRAVER.get(), "Netherite backengraver");
+        add(RegMod.WOODEN_BACKENGRAVER.get(), "Wooden BackEngraver");
+        add(RegMod.STONE_BACKENGRAVER.get(), "Stone BackEngraver");
+        add(RegMod.COPPER_BACKENGRAVER.get(), "Copper BackEngraver");
+        add(RegMod.IRON_BACKENGRAVER.get(), "Iron BackEngraver");
+        add(RegMod.GOLDEN_BACKENGRAVER.get(), "Golden BackEngraver");
+        add(RegMod.DIAMOND_BACKENGRAVER.get(), "Diamond BackEngraver");
+        add(RegMod.NETHERITE_BACKENGRAVER.get(), "Netherite BackEngraver");
 
-        add(RegMod.WOODEN_BACKMUTATOR.get(), "Wooden backmutator");
-        add(RegMod.STONE_BACKMUTATOR.get(), "Stone backmutator");
-        add(RegMod.COPPER_BACKMUTATOR.get(), "Copper backmutator");
-        add(RegMod.IRON_BACKMUTATOR.get(), "Iron backmutator");
-        add(RegMod.GOLDEN_BACKMUTATOR.get(), "Golden backmutator");
-        add(RegMod.DIAMOND_BACKMUTATOR.get(), "Diamond backmutator");
-        add(RegMod.NETHERITE_BACKMUTATOR.get(), "Netherite backmutator");
+        add(RegMod.WOODEN_BACKMUTATOR.get(), "Wooden BackMutator");
+        add(RegMod.STONE_BACKMUTATOR.get(), "Stone BackMutator");
+        add(RegMod.COPPER_BACKMUTATOR.get(), "Copper BackMutator");
+        add(RegMod.IRON_BACKMUTATOR.get(), "Iron BackMutator");
+        add(RegMod.GOLDEN_BACKMUTATOR.get(), "Golden BackMutator");
+        add(RegMod.DIAMOND_BACKMUTATOR.get(), "Diamond BackMutator");
+        add(RegMod.NETHERITE_BACKMUTATOR.get(), "Netherite BackMutator");
 
     }
 }

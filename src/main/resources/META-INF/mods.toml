@@ -14,8 +14,8 @@ authors="Wratixor"
 #displayTest="MATCH_VERSION"
 description='''
 BackStick (named after backslash) contains:
-- 4 new items for crafting (BackStick, BackBreacker, BackMutator, BackGravier);
-- 7 levels of development for each (wood, stone, copper, iron, gold, diamond, netherite);
+- 4 new items for crafting (BackStick, BackBreacker, BackEngraver, BackMutator);
+- 7 levels of development for each (Wooden, Stone, Copper, Iron, Golden, Diamond, Netherite);
 - as well as several recipes that make life easier using it all.
 Source - https://github.com/wratixor/backstick
 '''
