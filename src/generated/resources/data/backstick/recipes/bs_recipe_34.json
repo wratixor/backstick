@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "backstick",
+  "key": {
+    "c": {
+      "tag": "minecraft:coals"
+    },
+    "i": {
+      "item": "backstick:diamond_backstick"
+    }
+  },
+  "pattern": [
+    "c",
+    "i"
+  ],
+  "result": {
+    "count": 128,
+    "item": "minecraft:torch"
+  }
+}

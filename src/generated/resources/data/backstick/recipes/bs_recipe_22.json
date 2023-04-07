@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "backstick",
+  "key": {
+    "i": {
+      "item": "backstick:wooden_backstick"
+    },
+    "s": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    " i ",
+    "isi",
+    " i "
+  ],
+  "result": {
+    "item": "backstick:wooden_backmutator"
+  }
+}

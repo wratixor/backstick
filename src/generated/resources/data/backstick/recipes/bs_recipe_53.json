@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "backstick",
+  "key": {
+    "i": {
+      "item": "backstick:iron_backstick"
+    }
+  },
+  "pattern": [
+    "i i",
+    "iii",
+    "i i"
+  ],
+  "result": {
+    "count": 16,
+    "item": "minecraft:ladder"
+  }
+}

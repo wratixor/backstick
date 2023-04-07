@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "backstick",
+  "ingredients": [
+    {
+      "tag": "backstick:backbreacker"
+    },
+    {
+      "tag": "minecraft:terracotta"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:brick"
+  }
+}

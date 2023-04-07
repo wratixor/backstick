@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "backstick:diamond_backmutator"
+  },
+  "result": {
+    "item": "backstick:netherite_backmutator"
+  }
+}
