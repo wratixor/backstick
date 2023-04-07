@@ -24,6 +24,9 @@ public class DurabilityCraftingItem extends TieredItem {
     public DurabilityCraftingItem(Tier tier, Rarity r) {
         super(tier, new Item.Properties().tab(SetMain.MODE_TAB).rarity(r).setNoRepair().fireResistant());
     }
+    public DurabilityCraftingItem(Tier tier, Rarity r, Properties p) {
+        super(tier, p.tab(SetMain.MODE_TAB).rarity(r).setNoRepair());
+    }
 
     @Override
     public boolean hasCraftingRemainingItem(ItemStack stack)
