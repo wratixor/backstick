@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "backstick",
+  "ingredients": [
+    {
+      "tag": "backstick:backmutator"
+    },
+    {
+      "tag": "forge:heads"
+    },
+    {
+      "tag": "forge:gunpowder"
+    },
+    {
+      "tag": "forge:gunpowder"
+    }
+  ],
+  "result": {
+    "item": "minecraft:creeper_head"
+  }
+}

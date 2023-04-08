@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "backstick",
+  "key": {
+    "i": {
+      "item": "backstick:netherite_backstick"
+    },
+    "s": {
+      "tag": "forge:ingots/netherite"
+    }
+  },
+  "pattern": [
+    " i ",
+    "isi",
+    " i "
+  ],
+  "result": {
+    "item": "backstick:netherite_backmutator"
+  }
+}

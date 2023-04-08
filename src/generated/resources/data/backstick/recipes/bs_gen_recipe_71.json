@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "backstick",
+  "ingredients": [
+    {
+      "tag": "backstick:backmutator"
+    },
+    {
+      "tag": "minecraft:terracotta"
+    }
+  ],
+  "result": {
+    "item": "minecraft:terracotta"
+  }
+}

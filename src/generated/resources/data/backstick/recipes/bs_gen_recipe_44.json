@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "backstick",
+  "key": {
+    "c": {
+      "tag": "minecraft:coals"
+    },
+    "i": {
+      "item": "backstick:stone_backstick"
+    },
+    "s": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    }
+  },
+  "pattern": [
+    "c",
+    "i",
+    "s"
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:soul_torch"
+  }
+}

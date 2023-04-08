@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "backstick",
+  "ingredients": [
+    {
+      "tag": "backstick:backmutator"
+    },
+    {
+      "tag": "forge:gravel"
+    },
+    {
+      "tag": "forge:gravel"
+    }
+  ],
+  "result": {
+    "item": "minecraft:flint"
+  }
+}
