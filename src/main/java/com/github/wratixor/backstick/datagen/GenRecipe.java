@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
@@ -119,6 +120,8 @@ public class GenRecipe extends RecipeProvider {
         ShapedRecipeBuilder.shaped(Blocks.SKELETON_SKULL, 1).pattern("bbb").pattern("beb").pattern("bbb").define('b', Blocks.BONE_BLOCK).define('e', RegMod.ANY_BACKENGRAVER).group(BSMODID).unlockedBy("has_backengraver", has(RegMod.ANY_BACKENGRAVER)).save(consumer, genResourceLocation());
         ShapelessRecipeBuilder.shapeless(Blocks.CHEST, 1).requires(RegMod.ANY_BACKENGRAVER).requires(ItemTags.LOGS).requires(ItemTags.LOGS).group(BSMODID).unlockedBy("has_backengraver", has(RegMod.ANY_BACKENGRAVER)).save(consumer, genResourceLocation());
         ShapelessRecipeBuilder.shapeless(Blocks.BARREL, 2).requires(RegMod.ANY_BACKENGRAVER).requires(ItemTags.LOGS).requires(ItemTags.LOGS).requires(ItemTags.LOGS).group(BSMODID).unlockedBy("has_backengraver", has(RegMod.ANY_BACKENGRAVER)).save(consumer, genResourceLocation());
+        ShapedRecipeBuilder.shaped(RegMod.RANDOM_ENCHANTED_BOOK.get(), 1).pattern("xxx").pattern("ebl").pattern("xxx").define('x', Items.EXPERIENCE_BOTTLE).define('l', Tags.Items.GEMS_LAPIS).define('b', Items.WRITABLE_BOOK).define('e', RegMod.ANY_BACKENGRAVER).group(BSMODID).unlockedBy("has_backengraver", has(RegMod.ANY_BACKENGRAVER)).save(consumer, genResourceLocation());
+
         // backmutator recipe
         ShapelessRecipeBuilder.shapeless(Blocks.TERRACOTTA, 1).requires(RegMod.ANY_BACKMUTATOR).requires(ItemTags.TERRACOTTA).group(BSMODID).unlockedBy("has_backmutator", has(RegMod.ANY_BACKMUTATOR)).save(consumer, genResourceLocation());
         ShapelessRecipeBuilder.shapeless(Blocks.WHITE_WOOL, 1).requires(RegMod.ANY_BACKMUTATOR).requires(ItemTags.WOOL).group(BSMODID).unlockedBy("has_backmutator", has(RegMod.ANY_BACKMUTATOR)).save(consumer, genResourceLocation());
@@ -132,6 +135,7 @@ public class GenRecipe extends RecipeProvider {
         ShapedRecipeBuilder.shaped(Items.EXPERIENCE_BOTTLE, 2).pattern("dbd").pattern("ama").pattern("ebe").define('b', Items.GLASS_BOTTLE).define('d', Tags.Items.GEMS_DIAMOND).define('a', Tags.Items.GEMS_AMETHYST).define('e', Tags.Items.GEMS_EMERALD).define('m', RegMod.ANY_BACKMUTATOR).group(BSMODID).unlockedBy("has_backmutator", has(RegMod.ANY_BACKMUTATOR)).save(consumer, genResourceLocation());
         ShapelessRecipeBuilder.shapeless(Items.GHAST_TEAR, 1).requires(RegMod.ANY_BACKMUTATOR).requires(Tags.Items.NUGGETS_IRON).requires(Tags.Items.GUNPOWDER).requires(Tags.Items.FEATHERS).group(BSMODID).unlockedBy("has_backmutator", has(RegMod.ANY_BACKMUTATOR)).save(consumer, genResourceLocation());
         ShapelessRecipeBuilder.shapeless(Items.SLIME_BALL, 1).requires(RegMod.ANY_BACKMUTATOR).requires(Items.GREEN_DYE).requires(Items.BONE_MEAL).requires(Items.EGG).group(BSMODID).unlockedBy("has_backmutator", has(RegMod.ANY_BACKMUTATOR)).save(consumer, genResourceLocation());
+        ShapelessRecipeBuilder.shapeless(Blocks.CLAY, 3).requires(RegMod.ANY_BACKMUTATOR).requires(ItemTags.DIRT).requires(ItemTags.SAND).requires(Tags.Items.GRAVEL).group(BSMODID).unlockedBy("has_backmutator", has(RegMod.ANY_BACKMUTATOR)).save(consumer, genResourceLocation());
         // heads
         ShapelessRecipeBuilder.shapeless(Blocks.SKELETON_SKULL, 1).requires(RegMod.ANY_BACKMUTATOR).requires(Tags.Items.HEADS).requires(Tags.Items.BONES).requires(Tags.Items.BONES).group(BSMODID).unlockedBy("has_head", has(Tags.Items.HEADS)).save(consumer, genResourceLocation());
         ShapelessRecipeBuilder.shapeless(Blocks.ZOMBIE_HEAD, 1).requires(RegMod.ANY_BACKMUTATOR).requires(Tags.Items.HEADS).requires(Items.ROTTEN_FLESH).requires(Items.ROTTEN_FLESH).group(BSMODID).unlockedBy("has_head", has(Tags.Items.HEADS)).save(consumer, genResourceLocation());

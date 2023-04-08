@@ -1,15 +1,26 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "group": "backstick",
-  "ingredients": [
-    {
-      "tag": "backstick:backmutator"
+  "key": {
+    "b": {
+      "item": "minecraft:writable_book"
     },
-    {
-      "tag": "minecraft:terracotta"
+    "e": {
+      "tag": "backstick:backengraver"
+    },
+    "l": {
+      "tag": "forge:gems/lapis"
+    },
+    "x": {
+      "item": "minecraft:experience_bottle"
     }
+  },
+  "pattern": [
+    "xxx",
+    "ebl",
+    "xxx"
   ],
   "result": {
-    "item": "minecraft:terracotta"
+    "item": "backstick:random_enchanted_book"
   }
 }

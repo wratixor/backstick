@@ -6,16 +6,17 @@
       "tag": "backstick:backmutator"
     },
     {
-      "tag": "forge:heads"
+      "tag": "minecraft:dirt"
     },
     {
-      "item": "minecraft:rotten_flesh"
+      "tag": "minecraft:sand"
     },
     {
-      "item": "minecraft:rotten_flesh"
+      "tag": "forge:gravel"
     }
   ],
   "result": {
-    "item": "minecraft:zombie_head"
+    "count": 3,
+    "item": "minecraft:clay"
   }
 }

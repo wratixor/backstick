@@ -9,13 +9,13 @@
       "tag": "forge:heads"
     },
     {
-      "tag": "forge:gunpowder"
+      "tag": "forge:bones"
     },
     {
-      "tag": "forge:gunpowder"
+      "tag": "forge:bones"
     }
   ],
   "result": {
-    "item": "minecraft:creeper_head"
+    "item": "minecraft:skeleton_skull"
   }
 }

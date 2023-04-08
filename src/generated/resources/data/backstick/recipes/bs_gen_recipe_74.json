@@ -6,10 +6,10 @@
       "tag": "backstick:backmutator"
     },
     {
-      "item": "minecraft:pumpkin"
+      "tag": "minecraft:beds"
     }
   ],
   "result": {
-    "item": "minecraft:melon"
+    "item": "minecraft:white_bed"
   }
 }

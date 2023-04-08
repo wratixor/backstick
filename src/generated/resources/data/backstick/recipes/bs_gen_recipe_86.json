@@ -9,13 +9,13 @@
       "tag": "forge:heads"
     },
     {
-      "item": "minecraft:wither_rose"
+      "item": "minecraft:rotten_flesh"
     },
     {
-      "item": "minecraft:wither_rose"
+      "item": "minecraft:rotten_flesh"
     }
   ],
   "result": {
-    "item": "minecraft:wither_skeleton_skull"
+    "item": "minecraft:zombie_head"
   }
 }

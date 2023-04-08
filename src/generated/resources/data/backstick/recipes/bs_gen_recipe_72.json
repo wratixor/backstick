@@ -6,10 +6,10 @@
       "tag": "backstick:backmutator"
     },
     {
-      "tag": "minecraft:wool"
+      "tag": "minecraft:terracotta"
     }
   ],
   "result": {
-    "item": "minecraft:white_wool"
+    "item": "minecraft:terracotta"
   }
 }

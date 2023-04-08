@@ -1,4 +1,4 @@
-// 1.19.2	2023-04-08T02:06:37.5859419	Item Models: backstick
+// 1.19.2	2023-04-08T21:18:45.9961338	Item Models: backstick
 106fa5f9be98da86da025544aad08ef9368362ab assets/backstick/models/item/copper_backbreacker.json
 1137ba3cf348b54737dde092556f94a8ebf1f431 assets/backstick/models/item/copper_backengraver.json
 3969073def6370ca89b8a8dc9a4677ed22fd1438 assets/backstick/models/item/copper_backmutator.json
@@ -19,6 +19,7 @@ a64f132715bb850af6711eb56d8869041fec0491 assets/backstick/models/item/iron_backs
 151de2a622f296684814efe3d5a09f9218953128 assets/backstick/models/item/netherite_backengraver.json
 a370c26d080fe146e37f6524d0db8205c1142256 assets/backstick/models/item/netherite_backmutator.json
 279e84d3893c30fd18de56a089062b3351f62566 assets/backstick/models/item/netherite_backstick.json
+2af470b6f3845c30915965c3b3844b9d2f60ab4a assets/backstick/models/item/random_enchanted_book.json
 ec5a9520a7bdc596d4e03368c63565ee80670305 assets/backstick/models/item/stone_backbreacker.json
 db088ef365385089e2ab94aff35628f2688a8e01 assets/backstick/models/item/stone_backengraver.json
 5b29c8c9febaca30a37fff2a7c07653400a5ae5b assets/backstick/models/item/stone_backmutator.json

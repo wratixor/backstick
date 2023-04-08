@@ -6,13 +6,10 @@
       "tag": "backstick:backmutator"
     },
     {
-      "tag": "forge:gravel"
-    },
-    {
-      "tag": "forge:gravel"
+      "item": "minecraft:melon"
     }
   ],
   "result": {
-    "item": "minecraft:flint"
+    "item": "minecraft:pumpkin"
   }
 }

@@ -6,13 +6,16 @@
       "tag": "backstick:backmutator"
     },
     {
-      "tag": "forge:gravel"
+      "tag": "forge:heads"
     },
     {
-      "tag": "forge:gravel"
+      "item": "minecraft:wither_rose"
+    },
+    {
+      "item": "minecraft:wither_rose"
     }
   ],
   "result": {
-    "item": "minecraft:flint"
+    "item": "minecraft:wither_skeleton_skull"
   }
 }

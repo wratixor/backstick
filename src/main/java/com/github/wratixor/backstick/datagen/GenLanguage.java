@@ -51,5 +51,7 @@ public class GenLanguage extends LanguageProvider {
         add(RegMod.DIAMOND_BACKMUTATOR.get(), "Diamond BackMutator");
         add(RegMod.NETHERITE_BACKMUTATOR.get(), "Netherite BackMutator");
 
+        add(RegMod.RANDOM_ENCHANTED_BOOK.get(), "Random Enchanted Book");
+
     }
 }

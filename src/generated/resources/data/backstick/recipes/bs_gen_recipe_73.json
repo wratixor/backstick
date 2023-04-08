@@ -6,10 +6,10 @@
       "tag": "backstick:backmutator"
     },
     {
-      "tag": "minecraft:beds"
+      "tag": "minecraft:wool"
     }
   ],
   "result": {
-    "item": "minecraft:white_bed"
+    "item": "minecraft:white_wool"
   }
 }

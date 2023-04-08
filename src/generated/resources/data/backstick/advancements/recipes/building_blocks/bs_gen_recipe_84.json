@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_head": {
+    "has_backmutator": {
       "conditions": {
         "items": [
           {
-            "tag": "forge:heads"
+            "tag": "backstick:backmutator"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_head",
+      "has_backmutator",
       "has_the_recipe"
     ]
   ],

@@ -1,6 +1,7 @@
 package com.github.wratixor.backstick.setup;
 
 import com.github.wratixor.backstick.item.DurabilityCraftingItem;
+import com.github.wratixor.backstick.item.RandomEnchantedBook;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -66,6 +67,8 @@ public class RegMod {
     public static final RegistryObject<Item> GOLDEN_BACKMUTATOR = ITEMS.register("golden_backmutator", () -> new DurabilityCraftingItem(Tiers.GOLD, Rarity.UNCOMMON));
     public static final RegistryObject<Item> DIAMOND_BACKMUTATOR = ITEMS.register("diamond_backmutator", () -> new DurabilityCraftingItem(Tiers.DIAMOND, Rarity.RARE));
     public static final RegistryObject<Item> NETHERITE_BACKMUTATOR = ITEMS.register("netherite_backmutator", () -> new DurabilityCraftingItem(Tiers.NETHERITE, Rarity.EPIC));
+
+    public static final RegistryObject<Item> RANDOM_ENCHANTED_BOOK = ITEMS.register("random_enchanted_book", () -> new RandomEnchantedBook());
 
 
 

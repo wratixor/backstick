@@ -1,21 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "group": "backstick",
-  "key": {
-    "b": {
+  "ingredients": [
+    {
+      "tag": "backstick:backmutator"
+    },
+    {
       "item": "minecraft:rotten_flesh"
     },
-    "m": {
-      "tag": "backstick:backmutator"
+    {
+      "item": "minecraft:rotten_flesh"
     }
-  },
-  "pattern": [
-    "bbb",
-    "bmb",
-    "bbb"
   ],
   "result": {
-    "count": 6,
     "item": "minecraft:leather"
   }
 }

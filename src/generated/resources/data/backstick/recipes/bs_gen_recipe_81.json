@@ -1,21 +1,30 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "group": "backstick",
-  "ingredients": [
-    {
+  "key": {
+    "a": {
+      "tag": "forge:gems/amethyst"
+    },
+    "b": {
+      "item": "minecraft:glass_bottle"
+    },
+    "d": {
+      "tag": "forge:gems/diamond"
+    },
+    "e": {
+      "tag": "forge:gems/emerald"
+    },
+    "m": {
       "tag": "backstick:backmutator"
-    },
-    {
-      "tag": "forge:nuggets/iron"
-    },
-    {
-      "tag": "forge:gunpowder"
-    },
-    {
-      "tag": "forge:feathers"
     }
+  },
+  "pattern": [
+    "dbd",
+    "ama",
+    "ebe"
   ],
   "result": {
-    "item": "minecraft:ghast_tear"
+    "count": 2,
+    "item": "minecraft:experience_bottle"
   }
 }

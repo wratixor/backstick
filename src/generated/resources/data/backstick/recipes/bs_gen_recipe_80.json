@@ -2,29 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "group": "backstick",
   "key": {
-    "a": {
-      "tag": "forge:gems/amethyst"
-    },
     "b": {
-      "item": "minecraft:glass_bottle"
-    },
-    "d": {
-      "tag": "forge:gems/diamond"
-    },
-    "e": {
-      "tag": "forge:gems/emerald"
+      "item": "minecraft:rotten_flesh"
     },
     "m": {
       "tag": "backstick:backmutator"
     }
   },
   "pattern": [
-    "dbd",
-    "ama",
-    "ebe"
+    "bbb",
+    "bmb",
+    "bbb"
   ],
   "result": {
-    "count": 2,
-    "item": "minecraft:experience_bottle"
+    "count": 6,
+    "item": "minecraft:leather"
   }
 }

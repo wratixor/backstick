@@ -6,16 +6,16 @@
       "tag": "backstick:backmutator"
     },
     {
-      "item": "minecraft:green_dye"
+      "tag": "forge:nuggets/iron"
     },
     {
-      "item": "minecraft:bone_meal"
+      "tag": "forge:gunpowder"
     },
     {
-      "item": "minecraft:egg"
+      "tag": "forge:feathers"
     }
   ],
   "result": {
-    "item": "minecraft:slime_ball"
+    "item": "minecraft:ghast_tear"
   }
 }

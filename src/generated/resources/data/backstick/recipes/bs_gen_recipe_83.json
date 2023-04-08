@@ -6,16 +6,16 @@
       "tag": "backstick:backmutator"
     },
     {
-      "tag": "forge:heads"
+      "item": "minecraft:green_dye"
     },
     {
-      "tag": "forge:bones"
+      "item": "minecraft:bone_meal"
     },
     {
-      "tag": "forge:bones"
+      "item": "minecraft:egg"
     }
   ],
   "result": {
-    "item": "minecraft:skeleton_skull"
+    "item": "minecraft:slime_ball"
   }
 }

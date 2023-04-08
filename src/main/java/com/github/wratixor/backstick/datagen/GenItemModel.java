@@ -46,5 +46,7 @@ public class GenItemModel extends ItemModelProvider {
         singleTexture(RegMod.DIAMOND_BACKMUTATOR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/diamond_backmutator"));
         singleTexture(RegMod.NETHERITE_BACKMUTATOR.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/netherite_backmutator"));
 
+        singleTexture(RegMod.RANDOM_ENCHANTED_BOOK.getId().getPath(), mcLoc("item/generated"), "layer0", mcLoc("item/writable_book"));
+
     }
 }
