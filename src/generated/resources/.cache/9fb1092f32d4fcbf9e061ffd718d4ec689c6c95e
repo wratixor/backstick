@@ -1,4 +1,4 @@
-// 1.19.2	2023-04-08T02:06:37.5559402	Recipes
+// 1.19.2	2023-04-08T15:59:47.2826633	Recipes
 97f935f25c66457022533df5334b9b00ee9d11f8 data/backstick/advancements/recipes/backstick_tab/bs_recipe_0.json
 2017fd8b558d89837a087987450c1f3587e4adba data/backstick/advancements/recipes/backstick_tab/bs_recipe_10.json
 438582d54784b38a6cbd62a29f8fbb6a8621d974 data/backstick/advancements/recipes/backstick_tab/bs_recipe_11.json
@@ -161,9 +161,9 @@ d4370742dba3f23ade837b7bb6aa3be65a9fdd02 data/backstick/recipes/bs_recipe_68.jso
 4325bbd9476721c1b1ed9884ace1546c8088156e data/backstick/recipes/bs_recipe_74.json
 cc02c92042c02ae2a52509c139ecb8fe8d7c7466 data/backstick/recipes/bs_recipe_75.json
 98fe2be619a1a63ab4d230e2faa70d1d68389e30 data/backstick/recipes/bs_recipe_76.json
-76fa9643f4044275722f3704d58840449eada6e4 data/backstick/recipes/bs_recipe_77.json
+a0f70aa0c3c9ff07d4ac32ef2ab470dde21d081f data/backstick/recipes/bs_recipe_77.json
 df1317641981e562b721748005474ba90b332b39 data/backstick/recipes/bs_recipe_78.json
-c9f4480d641e36d1ff9840efda4a9fe58af1eb6f data/backstick/recipes/bs_recipe_79.json
+5fd974e130d78859626dced72efc0eed65a6c705 data/backstick/recipes/bs_recipe_79.json
 7cf4bcc846babb5382b5337a7da3fa4ce67a8531 data/backstick/recipes/bs_recipe_8.json
 9a9c21555e95282d3f69cb872cc01f9193b8a3eb data/backstick/recipes/bs_recipe_80.json
 3a9b9d25b66a8c9e9e577deb2722e2c025ecee42 data/backstick/recipes/bs_recipe_81.json

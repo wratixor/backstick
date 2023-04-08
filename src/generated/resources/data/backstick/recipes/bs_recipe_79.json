@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "group": "backstick",
   "key": {
+    "a": {
+      "tag": "forge:gems/amethyst"
+    },
     "b": {
       "item": "minecraft:glass_bottle"
     },
@@ -17,7 +20,7 @@
   },
   "pattern": [
     "dbd",
-    "bmb",
+    "ama",
     "ebe"
   ],
   "result": {
