@@ -29,5 +29,10 @@
   "item.backstick.wooden_backengraver": "Wooden BackEngraver",
   "item.backstick.wooden_backmutator": "Wooden BackMutator",
   "item.backstick.wooden_backstick": "Wooden BackStick",
-  "itemGroup.backstick_tab": "BackStick"
+  "itemGroup.backstick_tab": "BackStick",
+  "message.backstick.copy_enchantments": "Book is enchanted with copying! Cost %s!",
+  "message.backstick.copy_enchantments_failed": "Copy Enchantment Failed! You LVL %s, but cost %s!",
+  "message.backstick.enchantment_failed": "Book Enchantment Failed!",
+  "message.backstick.mini_random_enchantments": "Book slightly enchanted randomly! LVL %s, cost 1!",
+  "message.backstick.random_enchantments": "Book randomly enchanted! LVL %s, cost %s!"
 }

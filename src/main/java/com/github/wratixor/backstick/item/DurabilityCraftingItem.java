@@ -2,6 +2,7 @@ package com.github.wratixor.backstick.item;
 
 import com.github.wratixor.backstick.setup.ClientConfig;
 import com.github.wratixor.backstick.setup.SetMain;
+import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -73,10 +74,12 @@ public class DurabilityCraftingItem extends TieredItem {
         super.appendHoverText(itemStack, level, list, flags);
         if( level != null && level.isClientSide && ClientConfig.ISDEBUG.get()) {
             double unb_count = itemStack.hasTag() ? itemStack.getOrCreateTag().getDouble(UNBREAKING_COUNTER_TAG) : 0;
-            list.add(Component.translatable(TOOLTIP,
-                    Double.toString(unb_count),
-                    Integer.toString(itemStack.getDamageValue()),
-                    this.getTier().getRepairIngredient().toJson().toString())
+            list.add(Component.translatable(
+                        TOOLTIP,
+                        Double.toString(unb_count),
+                        Integer.toString(itemStack.getDamageValue()),
+                        this.getTier().getRepairIngredient().toJson().toString()
+                        ).withStyle(ChatFormatting.DARK_BLUE)
             );
         }
     }

@@ -1,13 +1,15 @@
 package com.github.wratixor.backstick.datagen;
 
 
+import com.github.wratixor.backstick.item.DurabilityCraftingItem;
+import com.github.wratixor.backstick.item.RandomEnchantedBook;
 import com.github.wratixor.backstick.setup.RegMod;
+import com.github.wratixor.backstick.setup.SetMain;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import static com.github.wratixor.backstick.BackStick.BSMODID;
-import static com.github.wratixor.backstick.item.DurabilityCraftingItem.TOOLTIP;
-import static com.github.wratixor.backstick.setup.SetMain.TAB_NAME;
+
 
 
 public class GenLanguage extends LanguageProvider {
@@ -16,8 +18,14 @@ public class GenLanguage extends LanguageProvider {
     }
     @Override
     protected void addTranslations() {
-        add("itemGroup." + TAB_NAME, "BackStick");
-        add(TOOLTIP, "Debug: { %s | %s | %s }");
+        add("itemGroup." + SetMain.TAB_NAME, "BackStick");
+        add(DurabilityCraftingItem.TOOLTIP, "Debug: { %s | %s | %s }");
+
+        add(RandomEnchantedBook.ENCHANTMENT_FAILED, "Book Enchantment Failed!");
+        add(RandomEnchantedBook.RANDOM_ENCHANTMENTS, "Book randomly enchanted! LVL %s, cost %s!");
+        add(RandomEnchantedBook.MINI_RANDOM_ENCHANTMENTS, "Book slightly enchanted randomly! LVL %s, cost 1!");
+        add(RandomEnchantedBook.COPY_ENCHANTMENTS, "Book is enchanted with copying! Cost %s!");
+        add(RandomEnchantedBook.COPY_ENCHANTMENTS_FAILED, "Copy Enchantment Failed! You LVL %s, but cost %s!");
 
         add(RegMod.WOODEN_BACKSTICK.get(), "Wooden BackStick");
         add(RegMod.STONE_BACKSTICK.get(), "Stone BackStick");

@@ -16,7 +16,8 @@ description='''
 BackStick (named after backslash) contains:
 - 4 new items for crafting (BackStick, BackBreacker, BackEngraver, BackMutator);
 - 7 tiers for them (Wooden, Stone, Copper, Iron, Golden, Diamond, Netherite);
-- as well as several recipes that make life easier using it all.
+- as well as several recipes that make life easier using it all;
+- 1 randomly enchanted book that can copy item enchantments from a second hand.
 Source - https://github.com/wratixor/backstick
 '''
 
