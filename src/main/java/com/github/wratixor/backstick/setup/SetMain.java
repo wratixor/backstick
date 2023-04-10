@@ -1,14 +1,13 @@
 package com.github.wratixor.backstick.setup;
 
+import com.github.wratixor.backstick.BackStick;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.jetbrains.annotations.NotNull;
 
-import static com.github.wratixor.backstick.BackStick.BSMODID;
-import static com.github.wratixor.backstick.BackStick.LOGGER;
-@Mod(BSMODID)
+@Mod(BackStick.BSMODID)
 public class SetMain {
     public static final String TAB_NAME = "backstick_tab";
     public static final CreativeModeTab MODE_TAB = new CreativeModeTab(TAB_NAME) {
@@ -18,6 +17,6 @@ public class SetMain {
         }
     };
     public static void init(final FMLCommonSetupEvent event) {
-        LOGGER.info("MainSetup init() start: " + event.description());
+        BackStick.LOGGER.info("MainSetup init() start: " + event.description());
     }
 }

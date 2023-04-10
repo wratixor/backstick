@@ -5,12 +5,12 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import static com.github.wratixor.backstick.BackStick.BSMODID;
+import com.github.wratixor.backstick.BackStick;
 
 public class GenItemModel extends ItemModelProvider {
 
     public GenItemModel(DataGenerator generator, ExistingFileHelper helper) {
-        super(generator, BSMODID, helper);
+        super(generator, BackStick.BSMODID, helper);
     }
     @Override
     protected void registerModels() {

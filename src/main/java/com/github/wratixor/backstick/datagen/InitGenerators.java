@@ -1,25 +1,17 @@
 package com.github.wratixor.backstick.datagen;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.Mth;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import java.util.List;
+import com.github.wratixor.backstick.BackStick;
 
-import static com.github.wratixor.backstick.BackStick.BSMODID;
-import static com.github.wratixor.backstick.BackStick.LOGGER;
-
-@Mod.EventBusSubscriber(modid = BSMODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = BackStick.BSMODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InitGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        LOGGER.info("InitGenerators gatherData() start");
+        BackStick.LOGGER.info("InitGenerators gatherData() start");
         DataGenerator generator = event.getGenerator();
         generator.addProvider(event.includeServer(), new GenRecipe(generator));
         GenBlockTags blockTags = new GenBlockTags(generator, event.getExistingFileHelper());

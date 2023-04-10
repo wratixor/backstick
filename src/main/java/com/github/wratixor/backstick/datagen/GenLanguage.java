@@ -8,13 +8,13 @@ import com.github.wratixor.backstick.setup.SetMain;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
-import static com.github.wratixor.backstick.BackStick.BSMODID;
+import com.github.wratixor.backstick.BackStick;
 
 
 
 public class GenLanguage extends LanguageProvider {
     public GenLanguage(DataGenerator generator, String locale) {
-        super(generator, BSMODID, locale);
+        super(generator, BackStick.BSMODID, locale);
     }
     @Override
     protected void addTranslations() {

@@ -19,25 +19,25 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 
-import static com.github.wratixor.backstick.BackStick.BSMODID;
-import static com.github.wratixor.backstick.BackStick.LOGGER;
+import com.github.wratixor.backstick.BackStick;
 
-@Mod(BSMODID)
+
+@Mod(BackStick.BSMODID)
 public class RegMod {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BSMODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BackStick.BSMODID);
     public static void init() {
-        LOGGER.info("RegMod init() start");
+        BackStick.LOGGER.info("RegMod init() start");
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(bus);
     }
     public static final Tier COPPER = TierSortingRegistry.registerTier(
             new ForgeTier(2, 192, 5.0F, 1.5F, 17, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.COPPER_INGOT)),
-            new ResourceLocation(BSMODID + ":tier_copper"),
+            new ResourceLocation(BackStick.BSMODID + ":tier_copper"),
             List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
-    public static final TagKey<Item> ANY_BACKSTICK = ItemTags.create(new ResourceLocation(BSMODID + ":backstick"));
-    public static final TagKey<Item> ANY_BACKBREACKER = ItemTags.create(new ResourceLocation(BSMODID + ":backbreacker"));
-    public static final TagKey<Item> ANY_BACKENGRAVER = ItemTags.create(new ResourceLocation(BSMODID + ":backengraver"));
-    public static final TagKey<Item> ANY_BACKMUTATOR = ItemTags.create(new ResourceLocation(BSMODID + ":backmutator"));
+    public static final TagKey<Item> ANY_BACKSTICK = ItemTags.create(new ResourceLocation(BackStick.BSMODID + ":backstick"));
+    public static final TagKey<Item> ANY_BACKBREACKER = ItemTags.create(new ResourceLocation(BackStick.BSMODID + ":backbreacker"));
+    public static final TagKey<Item> ANY_BACKENGRAVER = ItemTags.create(new ResourceLocation(BackStick.BSMODID + ":backengraver"));
+    public static final TagKey<Item> ANY_BACKMUTATOR = ItemTags.create(new ResourceLocation(BackStick.BSMODID + ":backmutator"));
 
     public static final RegistryObject<Item> WOODEN_BACKSTICK = ITEMS.register("wooden_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> STONE_BACKSTICK = ITEMS.register("stone_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.COMMON).fireResistant()));

@@ -9,10 +9,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import com.github.wratixor.backstick.setup.*;
 
-import static com.github.wratixor.backstick.BackStick.BSMODID;
 
-
-@Mod(BSMODID)
+@Mod(BackStick.BSMODID)
 public class BackStick
 {
     public static final String BSMODID = "backstick";

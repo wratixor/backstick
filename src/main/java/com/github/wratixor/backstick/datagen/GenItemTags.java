@@ -6,12 +6,12 @@ import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import static com.github.wratixor.backstick.BackStick.BSMODID;
+import com.github.wratixor.backstick.BackStick;
 
 
 public class GenItemTags extends ItemTagsProvider {
     public GenItemTags(DataGenerator generator, BlockTagsProvider provider, ExistingFileHelper helper) {
-        super(generator, provider, BSMODID, helper);
+        super(generator, provider, BackStick.BSMODID, helper);
     }
     @Override
     protected void addTags() {

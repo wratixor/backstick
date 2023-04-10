@@ -17,16 +17,16 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
-import static com.github.wratixor.backstick.BackStick.BSMODID;
-import static com.github.wratixor.backstick.BackStick.LOGGER;
+import com.github.wratixor.backstick.BackStick;
+
 
 public class RandomEnchantedBook extends Item {
 
-    public static final String COPY_ENCHANTMENTS = "message." + BSMODID + ".copy_enchantments";
-    public static final String COPY_ENCHANTMENTS_FAILED = "message." + BSMODID + ".copy_enchantments_failed";
-    public static final String RANDOM_ENCHANTMENTS = "message." + BSMODID + ".random_enchantments";
-    public static final String MINI_RANDOM_ENCHANTMENTS = "message." + BSMODID + ".mini_random_enchantments";
-    public static final String ENCHANTMENT_FAILED = "message." + BSMODID + ".enchantment_failed";
+    public static final String COPY_ENCHANTMENTS = "message." + BackStick.BSMODID + ".copy_enchantments";
+    public static final String COPY_ENCHANTMENTS_FAILED = "message." + BackStick.BSMODID + ".copy_enchantments_failed";
+    public static final String RANDOM_ENCHANTMENTS = "message." + BackStick.BSMODID + ".random_enchantments";
+    public static final String MINI_RANDOM_ENCHANTMENTS = "message." + BackStick.BSMODID + ".mini_random_enchantments";
+    public static final String ENCHANTMENT_FAILED = "message." + BackStick.BSMODID + ".enchantment_failed";
 
 
     public RandomEnchantedBook() {
