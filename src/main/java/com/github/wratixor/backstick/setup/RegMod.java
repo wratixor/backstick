@@ -65,7 +65,7 @@ public class RegMod {
     public static final RegistryObject<Item> DIAMOND_BACKMUTATOR = ITEMS.register("diamond_backmutator", () -> new DurabilityCraftingItem(Tiers.DIAMOND, Rarity.RARE));
     public static final RegistryObject<Item> NETHERITE_BACKMUTATOR = ITEMS.register("netherite_backmutator", () -> new DurabilityCraftingItem(Tiers.NETHERITE, Rarity.EPIC));
 
-    public static final RegistryObject<Item> RANDOM_ENCHANTED_BOOK = ITEMS.register("random_enchanted_book", () -> new RandomEnchantedBook());
+    public static final RegistryObject<Item> RANDOM_ENCHANTED_BOOK = ITEMS.register("random_enchanted_book", () -> new RandomEnchantedBook(1));
 
 
 

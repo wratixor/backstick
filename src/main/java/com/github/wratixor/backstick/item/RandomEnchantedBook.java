@@ -29,8 +29,8 @@ public class RandomEnchantedBook extends Item {
     public static final String ENCHANTMENT_FAILED = "message." + BackStick.BSMODID + ".enchantment_failed";
 
 
-    public RandomEnchantedBook() {
-        super(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(1).rarity(Rarity.EPIC));
+    public RandomEnchantedBook(int i) {
+        super(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(i).rarity(Rarity.EPIC));
     }
 
     @Override
