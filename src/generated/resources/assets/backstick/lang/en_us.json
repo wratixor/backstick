@@ -32,7 +32,7 @@
   "itemGroup.backstick_tab": "BackStick",
   "message.backstick.copy_enchantments": "Book is enchanted with copying! Cost %s!",
   "message.backstick.copy_enchantments_failed": "Copy Enchantment Failed! You LVL %s, but cost %s!",
-  "message.backstick.enchantment_failed": "Book Enchantment Failed!",
+  "message.backstick.enchantment_failed": "Book Enchantment Failed! You have no LVL!",
   "message.backstick.mini_random_enchantments": "Book slightly enchanted randomly! LVL %s, cost 1!",
   "message.backstick.random_enchantments": "Book randomly enchanted! LVL %s, cost %s!"
 }

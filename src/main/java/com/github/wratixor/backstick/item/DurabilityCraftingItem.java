@@ -17,7 +17,6 @@ import java.util.List;
 import com.github.wratixor.backstick.BackStick;
 import static java.lang.Math.pow;
 
-@Mod(BackStick.BSMODID)
 public class DurabilityCraftingItem extends TieredItem {
     private static final String UNBREAKING_COUNTER_TAG = "UCT";
     public static final String TOOLTIP = "debug." + BackStick.BSMODID + ".tooltip";

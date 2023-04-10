@@ -21,7 +21,7 @@ public class GenLanguage extends LanguageProvider {
         add("itemGroup." + SetMain.TAB_NAME, "BackStick");
         add(DurabilityCraftingItem.TOOLTIP, "Debug: { %s | %s | %s }");
 
-        add(RandomEnchantedBook.ENCHANTMENT_FAILED, "Book Enchantment Failed!");
+        add(RandomEnchantedBook.ENCHANTMENT_FAILED, "Book Enchantment Failed! You have no LVL!");
         add(RandomEnchantedBook.RANDOM_ENCHANTMENTS, "Book randomly enchanted! LVL %s, cost %s!");
         add(RandomEnchantedBook.MINI_RANDOM_ENCHANTMENTS, "Book slightly enchanted randomly! LVL %s, cost 1!");
         add(RandomEnchantedBook.COPY_ENCHANTMENTS, "Book is enchanted with copying! Cost %s!");
