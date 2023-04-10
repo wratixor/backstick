@@ -1,11 +1,12 @@
 package com.github.wratixor.backstick.setup;
 
-import com.github.wratixor.backstick.BackStick;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.jetbrains.annotations.NotNull;
+
+import com.github.wratixor.backstick.BackStick;
 
 @Mod(BackStick.BSMODID)
 public class SetMain {
