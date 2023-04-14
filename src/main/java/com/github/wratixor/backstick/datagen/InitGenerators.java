@@ -5,13 +5,14 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import com.github.wratixor.backstick.BackStick;
+import static com.github.wratixor.backstick.BackStick.BSMODID;
+import static com.github.wratixor.backstick.BackStick.LOGGER;
 
-@Mod.EventBusSubscriber(modid = BackStick.BSMODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = BSMODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InitGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        BackStick.LOGGER.info("InitGenerators gatherData() start");
+        LOGGER.info("InitGenerators gatherData() start");
         DataGenerator generator = event.getGenerator();
         generator.addProvider(event.includeServer(), new GenRecipe(generator));
         GenBlockTags blockTags = new GenBlockTags(generator, event.getExistingFileHelper());

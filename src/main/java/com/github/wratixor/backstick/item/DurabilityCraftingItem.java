@@ -8,18 +8,18 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-import com.github.wratixor.backstick.BackStick;
 import static java.lang.Math.pow;
+import static com.github.wratixor.backstick.BackStick.BSMODID;
+
 
 public class DurabilityCraftingItem extends TieredItem {
     private static final String UNBREAKING_COUNTER_TAG = "UCT";
-    public static final String TOOLTIP = "debug." + BackStick.BSMODID + ".tooltip";
+    public static final String TOOLTIP = "debug." + BSMODID + ".tooltip";
 
     public DurabilityCraftingItem(Tier tier, Rarity r) {
         super(tier, new Item.Properties().tab(SetMain.MODE_TAB).rarity(r).setNoRepair().fireResistant());

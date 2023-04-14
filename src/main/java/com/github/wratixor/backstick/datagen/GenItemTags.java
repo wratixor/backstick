@@ -4,14 +4,16 @@ import com.github.wratixor.backstick.setup.RegMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import com.github.wratixor.backstick.BackStick;
+import static com.github.wratixor.backstick.BackStick.BSMODID;
 
 
 public class GenItemTags extends ItemTagsProvider {
     public GenItemTags(DataGenerator generator, BlockTagsProvider provider, ExistingFileHelper helper) {
-        super(generator, provider, BackStick.BSMODID, helper);
+        super(generator, provider, BSMODID, helper);
     }
     @Override
     protected void addTags() {
@@ -50,6 +52,10 @@ public class GenItemTags extends ItemTagsProvider {
                 .add(RegMod.GOLDEN_BACKMUTATOR.get())
                 .add(RegMod.DIAMOND_BACKMUTATOR.get())
                 .add(RegMod.NETHERITE_BACKMUTATOR.get())
+        ;
+
+        tag(ItemTags.create(new ResourceLocation("forge:books"))).replace(false)
+                .add(RegMod.RANDOM_ENCHANTED_BOOK.get())
         ;
 
     }

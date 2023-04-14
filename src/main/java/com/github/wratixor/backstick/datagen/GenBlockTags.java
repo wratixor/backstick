@@ -4,11 +4,11 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import com.github.wratixor.backstick.BackStick;
+import static com.github.wratixor.backstick.BackStick.BSMODID;
 
 public class GenBlockTags extends BlockTagsProvider {
     public GenBlockTags(DataGenerator generator, ExistingFileHelper helper) {
-        super(generator, BackStick.BSMODID, helper);
+        super(generator, BSMODID, helper);
     }
     @Override
     protected void addTags() {
