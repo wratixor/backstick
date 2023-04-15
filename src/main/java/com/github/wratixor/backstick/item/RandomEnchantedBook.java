@@ -90,7 +90,7 @@ public class RandomEnchantedBook extends Item {
             }
         } else { // lvl = 0
             if (level.isClientSide) {
-                player.sendSystemMessage(Component.translatable(ENCHANTMENT_FAILED, ServerConfig.REB_MIN_LVL.toString()).withStyle(ChatFormatting.ITALIC));
+                player.sendSystemMessage(Component.translatable(ENCHANTMENT_FAILED, Integer.toString(ServerConfig.REB_MIN_LVL.get())).withStyle(ChatFormatting.ITALIC));
             }
         }
         return InteractionResultHolder.success(result);

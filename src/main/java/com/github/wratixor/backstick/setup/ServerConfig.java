@@ -17,13 +17,13 @@ public class ServerConfig {
                 .comment("Minimum LVL for use REB")
                 .defineInRange("min_lvl", 3, 1, 512);
         REB_OFFHAND_RANDOM_LEVEL = SERVER_BUILDER
-                .comment("Maximum LVL for offhand random enchants")
+                .comment("Maximum LVL for random off-hand enchantments")
                 .defineInRange("ofh_lvl", 16, 1, 512);
         REB_MAX_RANDOM_LEVEL = SERVER_BUILDER
                 .comment("Maximum LVL for random enchants")
                 .defineInRange("max_lvl", 64, 1, 512);
         REB_TREASURE_RANDOM_POSSIBLE = SERVER_BUILDER
-                .comment("Set TREASURE enchant POSSIBLE in random enchants")
+                .comment("Set TREASURE Enchantment POSSIBLE in Random Enchantments")
                 .define("treasure_possible", true);
 
         SERVER_BUILDER.pop();
