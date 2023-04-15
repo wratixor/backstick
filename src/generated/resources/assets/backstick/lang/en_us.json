@@ -1,8 +1,4 @@
 {
-  "com.github.wratixor.backstick.item.enchantment.EffectChant@1bf6c568.desc": "Gives Jump Boost Effect",
-  "com.github.wratixor.backstick.item.enchantment.EffectChant@42cb7c94.desc": "Gives Strength Effect",
-  "com.github.wratixor.backstick.item.enchantment.EffectChant@55002de6.desc": "Gives Night Vision Effect",
-  "com.github.wratixor.backstick.item.enchantment.EffectChant@5ad07f8a.desc": "Gives Speed Effect",
   "debug.backstick.tooltip": "Debug: { %s | %s | %s }",
   "enchantment.backstick.jump_boost": "Jump Boost",
   "enchantment.backstick.night_vision": "Night Vision",

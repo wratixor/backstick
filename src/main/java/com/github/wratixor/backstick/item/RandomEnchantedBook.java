@@ -20,7 +20,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Map;
 
 import static com.github.wratixor.backstick.BackStick.BSMODID;
-//import static com.github.wratixor.backstick.BackStick.LOGGER;
 
 
 public class RandomEnchantedBook extends Item {
@@ -94,27 +93,20 @@ public class RandomEnchantedBook extends Item {
 
     private int calculateCost (Map < Enchantment, Integer > enchantments){
         int lvl_cost = 0;
-        //LOGGER.debug("Calculate size: {}", enchantments.size());
         for (Map.Entry<Enchantment, Integer> entry : enchantments.entrySet()) {
             lvl_cost += entry.getValue();
-            //LOGGER.debug("COST: {}, VALUE: {}, ENCHANT: {}", lvl_cost, entry.getValue(), entry.getKey().getDescriptionId());
             if (entry.getKey().isTreasureOnly()) {
                 lvl_cost++;
-                //LOGGER.debug("TREASURE COST: {}", lvl_cost);
             }
             switch (entry.getKey().getRarity()) {
                 case VERY_RARE:
                     lvl_cost++;
-                    //LOGGER.debug("SW VERY RARE COST: {}", lvl_cost);
                 case RARE:
                     lvl_cost++;
-                   //LOGGER.debug("SW RARE COST: {}", lvl_cost);
                 case UNCOMMON:
                     lvl_cost++;
-                   //LOGGER.debug("SW UNCOMMON COST: {}", lvl_cost);
             }
         }
-        //LOGGER.debug("TOTAL COST: {}", lvl_cost);
         return lvl_cost;
     }
 }

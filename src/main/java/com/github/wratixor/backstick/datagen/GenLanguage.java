@@ -64,10 +64,6 @@ public class GenLanguage extends LanguageProvider {
         add(RegMod.STRENGTH.get(), "Strength");
         add(RegMod.SPEED.get(), "Speed");
         add(RegMod.JUMP_BOOST.get(), "Jump Boost");
-        add(RegMod.NIGHT_VISION.get() + ".desc", "Gives Night Vision Effect");
-        add(RegMod.STRENGTH.get() + ".desc", "Gives Strength Effect");
-        add(RegMod.SPEED.get() + ".desc", "Gives Speed Effect");
-        add(RegMod.JUMP_BOOST.get() + ".desc", "Gives Jump Boost Effect");
 
 
     }
