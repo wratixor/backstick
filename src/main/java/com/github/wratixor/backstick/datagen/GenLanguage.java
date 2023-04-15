@@ -21,11 +21,10 @@ public class GenLanguage extends LanguageProvider {
         add("itemGroup." + SetMain.TAB_NAME, "BackStick");
         add(DurabilityCraftingItem.TOOLTIP, "Debug: { %s | %s | %s }");
 
-        add(RandomEnchantedBook.ENCHANTMENT_FAILED, "Book Enchantment Failed! You have no LVL!");
-        add(RandomEnchantedBook.RANDOM_ENCHANTMENTS, "Book randomly enchanted! LVL %s, cost %s!");
-        add(RandomEnchantedBook.MINI_RANDOM_ENCHANTMENTS, "Book slightly enchanted randomly! LVL %s, cost 1!");
-        add(RandomEnchantedBook.COPY_ENCHANTMENTS, "Book is enchanted with copying! Cost %s!");
-        add(RandomEnchantedBook.COPY_ENCHANTMENTS_FAILED, "Copy Enchantment Failed! You LVL %s, but cost %s!");
+        add(RandomEnchantedBook.ENCHANTMENT_FAILED, "Enchanting failed! Minimum LVL %s!");
+        add(RandomEnchantedBook.RANDOM_ENCHANTMENTS, "Trying to get random enchantments for level %s...");
+        add(RandomEnchantedBook.COPY_ENCHANTMENTS, "The Book is enchanted! Cost %s!");
+        add(RandomEnchantedBook.COPY_ENCHANTMENTS_FAILED, "Enchanting failed! Your level is %s and cost is %s!");
 
         add(RegMod.WOODEN_BACKSTICK.get(), "Wooden BackStick");
         add(RegMod.STONE_BACKSTICK.get(), "Stone BackStick");
@@ -60,6 +59,16 @@ public class GenLanguage extends LanguageProvider {
         add(RegMod.NETHERITE_BACKMUTATOR.get(), "Netherite BackMutator");
 
         add(RegMod.RANDOM_ENCHANTED_BOOK.get(), "Random Enchanted Book");
+
+        add(RegMod.NIGHT_VISION.get(), "Night Vision");
+        add(RegMod.STRENGTH.get(), "Strength");
+        add(RegMod.SPEED.get(), "Speed");
+        add(RegMod.JUMP_BOOST.get(), "Jump Boost");
+        add(RegMod.NIGHT_VISION.get() + ".desc", "Gives Night Vision Effect");
+        add(RegMod.STRENGTH.get() + ".desc", "Gives Strength Effect");
+        add(RegMod.SPEED.get() + ".desc", "Gives Speed Effect");
+        add(RegMod.JUMP_BOOST.get() + ".desc", "Gives Jump Boost Effect");
+
 
     }
 }

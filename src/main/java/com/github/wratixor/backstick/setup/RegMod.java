@@ -2,12 +2,16 @@ package com.github.wratixor.backstick.setup;
 
 import com.github.wratixor.backstick.item.DurabilityCraftingItem;
 import com.github.wratixor.backstick.item.RandomEnchantedBook;
+import com.github.wratixor.backstick.item.enchantment.EffectChant;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,10 +28,14 @@ import static com.github.wratixor.backstick.BackStick.LOGGER;
 
 public class RegMod {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BSMODID);
+    public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, BSMODID);
+
+
     public static void init() {
         LOGGER.info("RegMod init() start");
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(bus);
+        ENCHANTMENTS.register(bus);
     }
     public static final Tier COPPER = TierSortingRegistry.registerTier(
             new ForgeTier(2, 192, 5.0F, 1.5F, 17, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.COPPER_INGOT)),
@@ -67,7 +75,12 @@ public class RegMod {
     public static final RegistryObject<Item> DIAMOND_BACKMUTATOR = ITEMS.register("diamond_backmutator", () -> new DurabilityCraftingItem(Tiers.DIAMOND, Rarity.RARE));
     public static final RegistryObject<Item> NETHERITE_BACKMUTATOR = ITEMS.register("netherite_backmutator", () -> new DurabilityCraftingItem(Tiers.NETHERITE, Rarity.EPIC));
 
-    public static final RegistryObject<Item> RANDOM_ENCHANTED_BOOK = ITEMS.register("random_enchanted_book", () -> new RandomEnchantedBook(1));
+    public static final RegistryObject<Item> RANDOM_ENCHANTED_BOOK = ITEMS.register("random_enchanted_book", RandomEnchantedBook::new);
+
+    public static final RegistryObject<Enchantment> NIGHT_VISION = ENCHANTMENTS.register("night_vision", () -> new EffectChant(1, EnchantmentCategory.ARMOR_HEAD, EquipmentSlot.HEAD));
+    public static final RegistryObject<Enchantment> STRENGTH = ENCHANTMENTS.register("strength", () -> new EffectChant(2, EnchantmentCategory.ARMOR_CHEST, EquipmentSlot.CHEST));
+    public static final RegistryObject<Enchantment> SPEED = ENCHANTMENTS.register("speed", () -> new EffectChant(2, EnchantmentCategory.ARMOR_LEGS, EquipmentSlot.LEGS));
+    public static final RegistryObject<Enchantment> JUMP_BOOST = ENCHANTMENTS.register("jump_boost", () -> new EffectChant(2, EnchantmentCategory.ARMOR_FEET, EquipmentSlot.FEET));
 
 
 

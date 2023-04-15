@@ -1,24 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "group": "backstick",
-  "key": {
-    "b": {
-      "item": "minecraft:writable_book"
-    },
-    "e": {
+  "ingredients": [
+    {
       "tag": "backstick:backengraver"
     },
-    "l": {
+    {
       "tag": "forge:gems/lapis"
     },
-    "x": {
-      "item": "minecraft:experience_bottle"
+    {
+      "tag": "forge:gems/lapis"
+    },
+    {
+      "item": "minecraft:writable_book"
     }
-  },
-  "pattern": [
-    "xxx",
-    "ebl",
-    "xxx"
   ],
   "result": {
     "item": "backstick:random_enchanted_book"

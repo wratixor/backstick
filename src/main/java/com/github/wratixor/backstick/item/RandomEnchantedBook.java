@@ -1,6 +1,7 @@
 package com.github.wratixor.backstick.item;
 
 import com.github.wratixor.backstick.setup.RegMod;
+import com.github.wratixor.backstick.setup.ServerConfig;
 import com.github.wratixor.backstick.setup.SetMain;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -25,12 +26,11 @@ public class RandomEnchantedBook extends Item {
     public static final String COPY_ENCHANTMENTS = "message." + BSMODID + ".copy_enchantments";
     public static final String COPY_ENCHANTMENTS_FAILED = "message." + BSMODID + ".copy_enchantments_failed";
     public static final String RANDOM_ENCHANTMENTS = "message." + BSMODID + ".random_enchantments";
-    public static final String MINI_RANDOM_ENCHANTMENTS = "message." + BSMODID + ".mini_random_enchantments";
     public static final String ENCHANTMENT_FAILED = "message." + BSMODID + ".enchantment_failed";
 
 
-    public RandomEnchantedBook(int i) {
-        super(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(i).rarity(Rarity.EPIC));
+    public RandomEnchantedBook() {
+        super(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(1).rarity(Rarity.EPIC));
     }
 
     @Override
@@ -40,71 +40,78 @@ public class RandomEnchantedBook extends Item {
 
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
-        ItemStack result = new ItemStack(Items.BOOK);
+        ItemStack result = new ItemStack(RegMod.RANDOM_ENCHANTED_BOOK.get());
 
-        if (player.experienceLevel >= 1) {
+        if (player.experienceLevel >= ServerConfig.REB_MIN_LVL.get()) {
+
+            Map<Enchantment, Integer> enchantments;
+            int lvl_cost;
+            int clamp_lvl;
+            ItemStack try_chant_item = new ItemStack(Items.BOOK);
+            ItemStack off_hand_item = null;
+            boolean offhand_encanted_book = false;
+            boolean offhand_enchanted = false;
 
             if (hand == InteractionHand.MAIN_HAND) {
-
-                boolean has_offhand = player.hasItemInSlot(EquipmentSlot.OFFHAND);
-                boolean offhand_encanted_book = false;
-                boolean offhand_enchanted = false;
-                ItemStack off_hand_item = null;
-                if (has_offhand) {
+                boolean offhand_enchantable = false;
+                clamp_lvl = Mth.clamp(player.experienceLevel, 1, ServerConfig.REB_MAX_RANDOM_LEVEL.get());
+                if (player.hasItemInSlot(EquipmentSlot.OFFHAND)) {
                     off_hand_item = player.getItemBySlot(EquipmentSlot.OFFHAND);
                     offhand_encanted_book = off_hand_item.is(Items.ENCHANTED_BOOK);
                     offhand_enchanted = off_hand_item.isEnchanted();
-
+                    offhand_enchantable = off_hand_item.isEnchantable();
                 }
-                if (offhand_enchanted || offhand_encanted_book) {
-
-                    result = new ItemStack(Items.ENCHANTED_BOOK);
-                    int lvl_cost = 0;
-                    Map<Enchantment, Integer> enchantments = EnchantmentHelper.getEnchantments(off_hand_item);
-
-                    for (Map.Entry<Enchantment, Integer> entry : enchantments.entrySet()) {
-                        lvl_cost += entry.getValue();
-
-                    }
-
-                    if (player.experienceLevel >= lvl_cost) {
-                        EnchantmentHelper.setEnchantments(enchantments, result);
-                        player.giveExperienceLevels(-lvl_cost);
-                        if (level.isClientSide) {
-                            player.sendSystemMessage(Component.translatable(COPY_ENCHANTMENTS, Integer.toString(lvl_cost)).withStyle(ChatFormatting.ITALIC));
-                        }
-                    } else if (level.isClientSide) {
-                        result = new ItemStack(RegMod.RANDOM_ENCHANTED_BOOK.get());
-                        player.sendSystemMessage(Component.translatable(COPY_ENCHANTMENTS_FAILED, Integer.toString(player.experienceLevel), Integer.toString(lvl_cost)).withStyle(ChatFormatting.ITALIC));
-                    }
-                    // copy enchant end if
-                } else {
-
-                    int clamp_lvl = Mth.clamp(player.experienceLevel, 1, 64);
-                    int lvl_cost = Mth.clamp(clamp_lvl / 10, 1, 6);
-                    result = EnchantmentHelper.enchantItem(player.getRandom(), result, clamp_lvl, true);
-                    player.giveExperienceLevels(-lvl_cost);
-                    if (level.isClientSide) {
-                        player.sendSystemMessage(Component.translatable(RANDOM_ENCHANTMENTS, Integer.toString(clamp_lvl), Integer.toString(lvl_cost)).withStyle(ChatFormatting.ITALIC));
-                    }
-                } // mainhand end if
+                if (offhand_enchantable) {
+                    try_chant_item = off_hand_item;
+                }
             } else {
+                clamp_lvl = Mth.clamp(player.experienceLevel, 1, ServerConfig.REB_OFFHAND_RANDOM_LEVEL.get());
+            }
 
-                int clamp_lvl = Mth.clamp(player.experienceLevel, 1, 10);
-                result = EnchantmentHelper.enchantItem(player.getRandom(), result, clamp_lvl, true);
-                player.giveExperienceLevels(-1);
+            if (offhand_enchanted || offhand_encanted_book) {
+                enchantments = EnchantmentHelper.getEnchantments(off_hand_item);
+            } else {
                 if (level.isClientSide) {
-                    player.sendSystemMessage(Component.translatable(MINI_RANDOM_ENCHANTMENTS, Integer.toString(clamp_lvl)).withStyle(ChatFormatting.ITALIC));
-                } // offhand end if
-            } // lvl > 0 end if
-        } else {
-            result = new ItemStack(RegMod.RANDOM_ENCHANTED_BOOK.get());
+                    player.sendSystemMessage(Component.translatable(RANDOM_ENCHANTMENTS, Integer.toString(clamp_lvl)).withStyle(ChatFormatting.ITALIC));
+                }
+                enchantments = EnchantmentHelper.getEnchantments(EnchantmentHelper.enchantItem(player.getRandom(), try_chant_item, clamp_lvl, ServerConfig.REB_TREASURE_RANDOM_POSSIBLE.get()));
+            }
+
+            lvl_cost = calculateCost(enchantments);
+            if (player.experienceLevel >= lvl_cost) {
+                result = new ItemStack(Items.ENCHANTED_BOOK);
+                EnchantmentHelper.setEnchantments(enchantments, result);
+                player.giveExperienceLevels(-lvl_cost);
+                if (level.isClientSide) {
+                    player.sendSystemMessage(Component.translatable(COPY_ENCHANTMENTS, Integer.toString(lvl_cost)).withStyle(ChatFormatting.ITALIC));
+                }
+            } else if (level.isClientSide) {
+                player.sendSystemMessage(Component.translatable(COPY_ENCHANTMENTS_FAILED, Integer.toString(player.experienceLevel), Integer.toString(lvl_cost)).withStyle(ChatFormatting.ITALIC));
+            }
+        } else { // lvl = 0
             if (level.isClientSide) {
-                player.sendSystemMessage(Component.translatable(ENCHANTMENT_FAILED).withStyle(ChatFormatting.ITALIC));
+                player.sendSystemMessage(Component.translatable(ENCHANTMENT_FAILED, ServerConfig.REB_MIN_LVL.toString()).withStyle(ChatFormatting.ITALIC));
             }
         }
-
-
         return InteractionResultHolder.success(result);
+    }
+
+    private int calculateCost (Map < Enchantment, Integer > enchantments){
+        int lvl_cost = 0;
+        for (Map.Entry<Enchantment, Integer> entry : enchantments.entrySet()) {
+            lvl_cost += entry.getValue();
+            if (entry.getKey().isTreasureOnly()) {
+                lvl_cost++;
+            }
+            switch (entry.getKey().getRarity()) {
+                case VERY_RARE:
+                    lvl_cost++;
+                case RARE:
+                    lvl_cost++;
+                case UNCOMMON:
+                    lvl_cost++;
+            }
+        }
+        return lvl_cost;
     }
 }
