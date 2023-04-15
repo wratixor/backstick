@@ -64,7 +64,7 @@ public class RandomEnchantedBook extends Item {
                     offhand_enchantable = off_hand_item.isEnchantable();
                 }
                 if (offhand_enchantable) {
-                    try_chant_item = off_hand_item;
+                    try_chant_item = off_hand_item.copy();
                 }
             } else {
                 clamp_lvl = Mth.clamp(player.experienceLevel, 1, ServerConfig.REB_OFFHAND_RANDOM_LEVEL.get());
