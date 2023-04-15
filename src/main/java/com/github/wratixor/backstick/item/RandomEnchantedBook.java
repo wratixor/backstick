@@ -43,7 +43,7 @@ public class RandomEnchantedBook extends Item {
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
         ItemStack result = new ItemStack(RegMod.RANDOM_ENCHANTED_BOOK.get());
-
+        if (level.isClientSide) { return InteractionResultHolder.success(result); }
         if (player.experienceLevel >= ServerConfig.REB_MIN_LVL.get()) {
 
             Map<Enchantment, Integer> enchantments;
@@ -73,9 +73,7 @@ public class RandomEnchantedBook extends Item {
             if (offhand_enchanted || offhand_encanted_book) {
                 enchantments = EnchantmentHelper.getEnchantments(off_hand_item);
             } else {
-                if (level.isClientSide) {
-                    player.sendSystemMessage(Component.translatable(RANDOM_ENCHANTMENTS, Integer.toString(clamp_lvl)).withStyle(ChatFormatting.ITALIC));
-                }
+                player.sendSystemMessage(Component.translatable(RANDOM_ENCHANTMENTS, Integer.toString(clamp_lvl)).withStyle(ChatFormatting.ITALIC));
                 enchantments = EnchantmentHelper.getEnchantments(EnchantmentHelper.enchantItem(player.getRandom(), try_chant_item, clamp_lvl, ServerConfig.REB_TREASURE_RANDOM_POSSIBLE.get()));
             }
 
@@ -84,16 +82,12 @@ public class RandomEnchantedBook extends Item {
                 result = new ItemStack(Items.ENCHANTED_BOOK);
                 EnchantmentHelper.setEnchantments(enchantments, result);
                 player.giveExperienceLevels(-lvl_cost);
-                if (level.isClientSide) {
-                    player.sendSystemMessage(Component.translatable(COPY_ENCHANTMENTS, Integer.toString(lvl_cost)).withStyle(ChatFormatting.ITALIC));
-                }
-            } else if (level.isClientSide) {
+                player.sendSystemMessage(Component.translatable(COPY_ENCHANTMENTS, Integer.toString(lvl_cost)).withStyle(ChatFormatting.ITALIC));
+            } else {
                 player.sendSystemMessage(Component.translatable(COPY_ENCHANTMENTS_FAILED, Integer.toString(player.experienceLevel), Integer.toString(lvl_cost)).withStyle(ChatFormatting.ITALIC));
             }
         } else { // lvl = 0
-            if (level.isClientSide) {
                 player.sendSystemMessage(Component.translatable(ENCHANTMENT_FAILED, Integer.toString(ServerConfig.REB_MIN_LVL.get())).withStyle(ChatFormatting.ITALIC));
-            }
         }
         return InteractionResultHolder.success(result);
     }
@@ -116,8 +110,8 @@ public class RandomEnchantedBook extends Item {
                     lvl_cost++;
                     LOGGER.debug("SW RARE COST: {}", lvl_cost);
                 case UNCOMMON:
-                    LOGGER.debug("SW UNCOMMON COST: {}", lvl_cost);
                     lvl_cost++;
+                    LOGGER.debug("SW UNCOMMON COST: {}", lvl_cost);
             }
         }
         LOGGER.debug("TOTAL COST: {}", lvl_cost);
