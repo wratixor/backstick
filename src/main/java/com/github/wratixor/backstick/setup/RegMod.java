@@ -78,9 +78,9 @@ public class RegMod {
     public static final RegistryObject<Item> RANDOM_ENCHANTED_BOOK = ITEMS.register("random_enchanted_book", RandomEnchantedBook::new);
 
     public static final RegistryObject<Enchantment> NIGHT_VISION = ENCHANTMENTS.register("night_vision", () -> new EffectChant(1, EnchantmentCategory.ARMOR_HEAD, EquipmentSlot.HEAD));
-    public static final RegistryObject<Enchantment> STRENGTH = ENCHANTMENTS.register("strength", () -> new EffectChant(2, EnchantmentCategory.ARMOR_CHEST, EquipmentSlot.CHEST));
-    public static final RegistryObject<Enchantment> SPEED = ENCHANTMENTS.register("speed", () -> new EffectChant(2, EnchantmentCategory.ARMOR_LEGS, EquipmentSlot.LEGS));
-    public static final RegistryObject<Enchantment> JUMP_BOOST = ENCHANTMENTS.register("jump_boost", () -> new EffectChant(2, EnchantmentCategory.ARMOR_FEET, EquipmentSlot.FEET));
+    public static final RegistryObject<Enchantment> STRENGTH = ENCHANTMENTS.register("strength", () -> new EffectChant(3, EnchantmentCategory.ARMOR_CHEST, EquipmentSlot.CHEST));
+    public static final RegistryObject<Enchantment> SPEED = ENCHANTMENTS.register("speed", () -> new EffectChant(3, EnchantmentCategory.ARMOR_LEGS, EquipmentSlot.LEGS));
+    public static final RegistryObject<Enchantment> JUMP_BOOST = ENCHANTMENTS.register("jump_boost", () -> new EffectChant(3, EnchantmentCategory.ARMOR_FEET, EquipmentSlot.FEET));
 
 
 

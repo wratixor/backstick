@@ -20,10 +20,10 @@ public class EnchantmentEffectHandler {
         int st_lvl = EnchantmentHelper.getEnchantmentLevel(RegMod.STRENGTH.get(), event.player);
         int jb_lvl = EnchantmentHelper.getEnchantmentLevel(RegMod.JUMP_BOOST.get(), event.player);
 
-        if (nv_lvl > 0 ) {event.player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 30));}
-        if (sp_lvl > 0 ) {event.player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, sp_lvl - 1));}
-        if (st_lvl > 0 ) {event.player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, sp_lvl - 1));}
-        if (jb_lvl > 0 ) {event.player.addEffect(new MobEffectInstance(MobEffects.JUMP, 30, sp_lvl - 1));}
+        if (nv_lvl > 0 ) {event.player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 230, nv_lvl - 1, false, false));}
+        if (sp_lvl > 0 ) {event.player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 70, sp_lvl - 1, false, false));}
+        if (st_lvl > 0 ) {event.player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 70, sp_lvl - 1, false, false));}
+        if (jb_lvl > 0 ) {event.player.addEffect(new MobEffectInstance(MobEffects.JUMP, 70, sp_lvl - 1, false, false));}
     }
 
 }
