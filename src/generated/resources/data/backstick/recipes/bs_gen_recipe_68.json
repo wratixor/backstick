@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "backstick",
   "key": {
     "b": {
@@ -16,5 +17,6 @@
   ],
   "result": {
     "item": "minecraft:skeleton_skull"
-  }
+  },
+  "show_notification": true
 }

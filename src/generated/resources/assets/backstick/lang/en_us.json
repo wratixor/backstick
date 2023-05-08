@@ -33,7 +33,7 @@
   "item.backstick.wooden_backengraver": "Wooden BackEngraver",
   "item.backstick.wooden_backmutator": "Wooden BackMutator",
   "item.backstick.wooden_backstick": "Wooden BackStick",
-  "itemGroup.backstick_tab": "BackStick",
+  "itemGroup.backstick.all": "BackStick",
   "message.backstick.copy_enchantments": "The Book is enchanted! Cost %s!",
   "message.backstick.copy_enchantments_failed": "Enchanting failed! Your level is %s and cost is %s!",
   "message.backstick.enchantment_failed": "Enchanting failed! Minimum LVL %s!",

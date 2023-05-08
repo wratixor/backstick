@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "backstick",
   "key": {
     "i": {
@@ -16,5 +17,6 @@
   ],
   "result": {
     "item": "backstick:wooden_backengraver"
-  }
+  },
+  "show_notification": true
 }

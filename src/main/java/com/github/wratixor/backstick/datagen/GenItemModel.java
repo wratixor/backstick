@@ -1,7 +1,7 @@
 package com.github.wratixor.backstick.datagen;
 
 import com.github.wratixor.backstick.setup.RegMod;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -9,8 +9,8 @@ import static com.github.wratixor.backstick.BackStick.BSMODID;
 
 public class GenItemModel extends ItemModelProvider {
 
-    public GenItemModel(DataGenerator generator, ExistingFileHelper helper) {
-        super(generator, BSMODID, helper);
+    public GenItemModel(PackOutput output, ExistingFileHelper helper) {
+        super(output, BSMODID, helper);
     }
     @Override
     protected void registerModels() {

@@ -46,13 +46,13 @@ public class RegMod {
     public static final TagKey<Item> ANY_BACKENGRAVER = ItemTags.create(new ResourceLocation(BSMODID + ":backengraver"));
     public static final TagKey<Item> ANY_BACKMUTATOR = ItemTags.create(new ResourceLocation(BSMODID + ":backmutator"));
 
-    public static final RegistryObject<Item> WOODEN_BACKSTICK = ITEMS.register("wooden_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.COMMON)));
-    public static final RegistryObject<Item> STONE_BACKSTICK = ITEMS.register("stone_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.COMMON).fireResistant()));
-    public static final RegistryObject<Item> COPPER_BACKSTICK = ITEMS.register("copper_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.UNCOMMON).fireResistant()));
-    public static final RegistryObject<Item> IRON_BACKSTICK = ITEMS.register("iron_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.UNCOMMON).fireResistant()));
-    public static final RegistryObject<Item> GOLDEN_BACKSTICK = ITEMS.register("golden_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.UNCOMMON).fireResistant()));
-    public static final RegistryObject<Item> DIAMOND_BACKSTICK = ITEMS.register("diamond_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.RARE).fireResistant()));
-    public static final RegistryObject<Item> NETHERITE_BACKSTICK = ITEMS.register("netherite_backstick", () -> new Item(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(64).rarity(Rarity.EPIC).fireResistant()));
+    public static final RegistryObject<Item> WOODEN_BACKSTICK = ITEMS.register("wooden_backstick", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> STONE_BACKSTICK = ITEMS.register("stone_backstick", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).fireResistant()));
+    public static final RegistryObject<Item> COPPER_BACKSTICK = ITEMS.register("copper_backstick", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON).fireResistant()));
+    public static final RegistryObject<Item> IRON_BACKSTICK = ITEMS.register("iron_backstick", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON).fireResistant()));
+    public static final RegistryObject<Item> GOLDEN_BACKSTICK = ITEMS.register("golden_backstick", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON).fireResistant()));
+    public static final RegistryObject<Item> DIAMOND_BACKSTICK = ITEMS.register("diamond_backstick", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.RARE).fireResistant()));
+    public static final RegistryObject<Item> NETHERITE_BACKSTICK = ITEMS.register("netherite_backstick", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC).fireResistant()));
     public static final RegistryObject<Item> WOODEN_BACKBREACKER = ITEMS.register("wooden_backbreacker", () -> new DurabilityCraftingItem(Tiers.WOOD, Rarity.COMMON, new Item.Properties()));
     public static final RegistryObject<Item> STONE_BACKBREACKER = ITEMS.register("stone_backbreacker", () -> new DurabilityCraftingItem(Tiers.STONE, Rarity.COMMON));
     public static final RegistryObject<Item> COPPER_BACKBREACKER = ITEMS.register("copper_backbreacker", () -> new DurabilityCraftingItem(COPPER, Rarity.UNCOMMON));

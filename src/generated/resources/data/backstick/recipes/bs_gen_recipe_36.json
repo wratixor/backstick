@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "backstick",
   "key": {
     "c": {
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "minecraft:redstone_torch"
-  }
+  },
+  "show_notification": true
 }

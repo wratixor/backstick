@@ -31,7 +31,7 @@ public class RandomEnchantedBook extends Item {
 
 
     public RandomEnchantedBook() {
-        super(new Item.Properties().tab(SetMain.MODE_TAB).stacksTo(1).rarity(Rarity.EPIC));
+        super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
     }
 
     @Override

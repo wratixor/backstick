@@ -22,10 +22,10 @@ public class DurabilityCraftingItem extends TieredItem {
     public static final String TOOLTIP = "debug." + BSMODID + ".tooltip";
 
     public DurabilityCraftingItem(Tier tier, Rarity r) {
-        super(tier, new Item.Properties().tab(SetMain.MODE_TAB).rarity(r).setNoRepair().fireResistant());
+        super(tier, new Item.Properties().rarity(r).setNoRepair().fireResistant());
     }
     public DurabilityCraftingItem(Tier tier, Rarity r, Properties p) {
-        super(tier, p.tab(SetMain.MODE_TAB).rarity(r).setNoRepair());
+        super(tier, p.rarity(r).setNoRepair());
     }
 
     @Override

@@ -5,7 +5,7 @@ import com.github.wratixor.backstick.item.DurabilityCraftingItem;
 import com.github.wratixor.backstick.item.RandomEnchantedBook;
 import com.github.wratixor.backstick.setup.RegMod;
 import com.github.wratixor.backstick.setup.SetMain;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import static com.github.wratixor.backstick.BackStick.BSMODID;
@@ -13,12 +13,12 @@ import static com.github.wratixor.backstick.BackStick.BSMODID;
 
 
 public class GenLanguage extends LanguageProvider {
-    public GenLanguage(DataGenerator generator, String locale) {
-        super(generator, BSMODID, locale);
+    public GenLanguage(PackOutput packOutput, String locale) {
+        super(packOutput, BSMODID, locale);
     }
     @Override
     protected void addTranslations() {
-        add("itemGroup." + SetMain.TAB_NAME, "BackStick");
+        add("itemGroup." + BSMODID + ".all", "BackStick");
         add(DurabilityCraftingItem.TOOLTIP, "Debug: { %s | %s | %s }");
 
         add(RandomEnchantedBook.ENCHANTMENT_FAILED, "Enchanting failed! Minimum LVL %s!");

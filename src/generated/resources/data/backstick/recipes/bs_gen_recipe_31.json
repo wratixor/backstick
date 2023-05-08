@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "backstick",
   "key": {
     "c": {
@@ -16,5 +17,6 @@
   "result": {
     "count": 16,
     "item": "minecraft:torch"
-  }
+  },
+  "show_notification": true
 }

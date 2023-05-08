@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "backstick",
   "key": {
     "i": {
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "backstick:stone_backbreacker"
-  }
+  },
+  "show_notification": true
 }
