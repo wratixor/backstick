@@ -2,6 +2,7 @@ package com.github.wratixor.backstick.setup;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,8 +13,8 @@ import static com.github.wratixor.backstick.BackStick.BSMODID;
 @Mod.EventBusSubscriber(modid = BSMODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RegModTabs {
     @SubscribeEvent
-    public void buildTabs(CreativeModeTabEvent.Register event) {
-        event.registerCreativeModeTab(new ResourceLocation(BSMODID, "all"), builder ->
+    public static void buildTabs(CreativeModeTabEvent.Register event) {
+        CreativeModeTab ALL = event.registerCreativeModeTab(new ResourceLocation(BSMODID, "all"), builder ->
                 builder.title(Component.translatable("itemGroup." + BSMODID + ".all"))
                        .icon(() -> new ItemStack(RegMod.WOODEN_BACKSTICK.get()))
                        .displayItems((parameters, output) -> {
