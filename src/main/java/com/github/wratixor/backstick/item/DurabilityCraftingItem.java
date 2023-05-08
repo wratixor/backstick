@@ -1,7 +1,6 @@
 package com.github.wratixor.backstick.item;
 
 import com.github.wratixor.backstick.setup.ClientConfig;
-import com.github.wratixor.backstick.setup.SetMain;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;

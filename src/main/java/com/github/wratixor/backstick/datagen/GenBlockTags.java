@@ -18,6 +18,7 @@ public class GenBlockTags extends IntrinsicHolderTagsProvider<Block> {
 
 
     public GenBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> future, @Nullable ExistingFileHelper helper) {
+        //noinspection deprecation
         super(output, Registries.BLOCK, future, block -> block.builtInRegistryHolder().key(), BSMODID, helper);
     }
 

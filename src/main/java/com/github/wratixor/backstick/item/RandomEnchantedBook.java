@@ -3,7 +3,6 @@ package com.github.wratixor.backstick.item;
 
 import com.github.wratixor.backstick.setup.RegMod;
 import com.github.wratixor.backstick.setup.ServerConfig;
-import com.github.wratixor.backstick.setup.SetMain;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;

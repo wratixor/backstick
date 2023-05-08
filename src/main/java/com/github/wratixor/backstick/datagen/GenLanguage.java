@@ -4,7 +4,6 @@ package com.github.wratixor.backstick.datagen;
 import com.github.wratixor.backstick.item.DurabilityCraftingItem;
 import com.github.wratixor.backstick.item.RandomEnchantedBook;
 import com.github.wratixor.backstick.setup.RegMod;
-import com.github.wratixor.backstick.setup.SetMain;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 

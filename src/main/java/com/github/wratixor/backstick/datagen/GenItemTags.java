@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -19,15 +20,10 @@ public class GenItemTags extends ItemTagsProvider {
     public GenItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> future, CompletableFuture<TagLookup<Block>> provider, @Nullable ExistingFileHelper helper) {
         super(output, future, provider, BSMODID, helper);
     }
-    /*
-    public GenItemTags(DataGenerator generator, BlockTagsProvider provider, ExistingFileHelper helper) {
-        super(generator, provider, BSMODID, helper);
-        }
-    */
 
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(RegMod.ANY_BACKSTICK).replace(false)
                 .add(RegMod.WOODEN_BACKSTICK.get())
                 .add(RegMod.STONE_BACKSTICK.get())
